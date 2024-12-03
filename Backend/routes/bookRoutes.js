@@ -1,12 +1,15 @@
 const express =require('express')
 
 
-const bookRoutes = expresss.router();
+const bookRoutes = express.Router();
 
 
 bookRoutes.get("/",(req,res)=>{
-    req.send("welcome to book route")
+    try {
+        res.status(200).send("welcome to book routes")
+    } catch (error) {
+        res.status(500).send({ message: "An error occurred", error: error.message });
+    }
 })
 
-
-export default bookRoutes;
+module.exports = bookRoutes
