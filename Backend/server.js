@@ -2,6 +2,7 @@ const http = require("http");
 const url = require('url');
 const path= require('path')
 const fs = require("fs/promises")
+
 // const __filename = url.fileURLToPath(import.meta.url) // only use import.meta in an ES module context, 
 console.log(__filename) //already declared when using commonJS module
 console.log(__dirname) //already declared when using commonJS module
@@ -52,6 +53,7 @@ try {
 }
 
 
+const PORT = process.env.PORT
 
 
 
@@ -60,6 +62,6 @@ try {
 //   res.end("<h1>Hello world</h1>");
 });
 
-server.listen(3000, () => {
-  console.log("server is running");
+server.listen(PORT, () => {
+  console.log(`server is running or ${PORT}`);
 });

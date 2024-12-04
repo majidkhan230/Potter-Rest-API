@@ -1,10 +1,11 @@
-const express = require('express')
+const express = require('express');
+const { spells } = require('../data/spells');
 
 const spellRoutes = express.Router();
 
 spellRoutes.get("/",(req,res)=>{
     try {
-        res.status(200).send("welcome to spell routes")
+        res.status(200).send(spells)
     } catch (error) {
         res.status(500).send({ message: "An error occurred", error: error.message });
     }

@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PotterAPI</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <h1>Homepage</h1>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#characters">Characters</a></li>
+            <li><a href="#houses">Houses</a></li>
+            <li><a href="#spells">Spells</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero" class="hero-container">
+        <h1>Welcome to PotterAPI</h1>
+        <p>Your ultimate source for Harry Potter data including books, characters, houses, and spells. Explore the magical world with ease using this REST API.</p>
+        <a href="https://github.com/majidkhan230/Potter-Rest-API/" target="_blank" class="cta-button">Visit GitHub Repo</a>
+    </section>
+
+    <div class="container">
+        <header>
+            <h1>PotterAPI</h1>
+            <p class="description">This is PotterAPI, a REST API that stores images and information about Harry Potter characters, books, and spells. For more info about the routes and query params, visit the <a href="https://github.com/majidkhan230/Potter-Rest-API/" target="_blank">GitHub repo</a>.</p>
+        </header>
+        <main>
+            <h2>Available Routes</h2>
+            <ul class="routes">
+                <li><a href="/books" target="_blank" id="books">/books</a></li>
+                <li><a href="/characters" target="_blank" id="characters">/characters</a></li>
+                <li><a href="/houses" target="_blank" id="houses">/houses</a></li>
+                <li><a href="/spells" target="_blank" id="spells">/spells</a></li>
+            </ul>
+        </main>
+    </div>
 </body>
 </html>
